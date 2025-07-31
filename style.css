@@ -1,0 +1,133 @@
+/* Estilo principal */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: #1b3c59;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+/* Inputs, selects e textarea com largura total e transições suaves */
+input, select, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;            /* Garante que ocupe todo o espaço do label */
+  box-sizing: border-box; /* Inclui padding na largura */
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito visual ao focar (para acessibilidade e UX) */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #1b3c59;
+  box-shadow: 0 0 5px rgba(27, 60, 89, 0.7);
+}
+
+button {
+  padding: 12px;
+  background-color: #1b3c59;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover do botão com cor e sombra */
+button:hover, button:focus {
+  background-color: #274e70;
+  box-shadow: 0 0 8px rgba(39, 78, 112, 0.7);
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  main {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+}
+
+/* Estilo do box de agradecimento */
+#agradecimento {
+  background-color: #e6f9ec;
+  border: 1px solid #a6d8b8;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  text-align: center;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+#agradecimento h2 {
+  color: #2a7b4f;
+  margin-bottom: 10px;
+}
+
+/* Classe para esconder elementos */
+.hidden {
+  display: none;
+}
+
+/* Animação suave para fade-in do box de agradecimento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

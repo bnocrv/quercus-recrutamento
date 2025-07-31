@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quercus Recrutamento & Talentos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Quercus Recrutamento & Talentos</h1>
+    <p>Formulário de Candidatura</p>
+  </header>
+
+  <main>
+    <form id="jobForm" novalidate>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label>Nome completo:
+          <input type="text" name="nome" required />
+        </label>
+        <label>Data de nascimento:
+          <input type="date" name="nascimento" required />
+        </label>
+        <label>Telefone:
+          <input type="tel" name="telefone" required />
+        </label>
+        <label>E-mail:
+          <input type="email" name="email" required />
+        </label>
+        <label>Endereço (bairro e cidade):
+          <input type="text" name="endereco" required />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações Profissionais</legend>
+        <label>Cargo pretendido:
+          <input type="text" name="cargo" required />
+        </label>
+        <label>Pretensão salarial:
+          <input type="text" name="salario" />
+        </label>
+        <label>Disponibilidade:
+          <select name="disponibilidade" required>
+            <option value="">Selecione</option>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+            <option>Integral</option>
+          </select>
+        </label>
+        <label>CNH:
+          <input type="text" name="cnh" placeholder="Sim / Não + Categoria" />
+        </label>
+        <label>Veículo próprio:
+          <select name="veiculo">
+            <option value="">Selecione</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Formação, Experiência e Habilidades</legend>
+        <textarea name="formacao" rows="4" placeholder="Resumo da formação, experiências e habilidades..." required></textarea>
+      </fieldset>
+
+      <button type="submit">Enviar Candidatura</button>
+      <p id="mensagemEnvio"></p>
+    </form>
+
+    <!-- Mensagem de agradecimento -->
+    <div id="agradecimento" class="hidden">
+      <h2>Obrigado por se candidatar!</h2>
+      <p>Recebemos suas informações com sucesso.<br/>
+         Nossa equipe de recrutamento analisará seu perfil em breve.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Quercus Recrutamento & Talentos</p>
+  </footer>
+
+  <!-- REMOVIDOS os scripts compat, porque usa Firebase modular -->
+
+  <!-- Firebase Config -->
+  <script type="module" src="firebase.js"></script>
+
+  <!-- Script principal -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
